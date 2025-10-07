@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class BerthTypeSimple {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String[] berths = {"SU", "LB", "MB", "UB", "LB", "MB", "UB", "SL"};
+        int seat = sc.nextInt();
+
+        if (seat < 1 || seat > 72) {
+            System.out.println("Invalid seat number");
+        } else {
+            int index = seat % 8;
+            System.out.println(berths[index]);
+        }
+
+        sc.close();
+    }
+}
