@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class TrainFareCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int age = sc.nextInt();
+        int distance = sc.nextInt();
+
+        if (age < 1 || age > 120 || distance < 1 || distance > 1000) {
+            System.out.println("Invalid input");
+            sc.close();
+            return;
+        }
+
+        int standardFarePerKm = 5;
+        double fare = distance * standardFarePerKm;
+
+        if (age < 12) {
+            fare *= 0.5;
+        } else if (age >= 60) {
+            fare *= 0.75;
+        }
+
+        System.out.println((int)fare);
+        sc.close();
+    }
+}
