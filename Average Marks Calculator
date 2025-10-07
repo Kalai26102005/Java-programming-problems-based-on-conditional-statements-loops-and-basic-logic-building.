@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int m1 = s.nextInt();
+        int m2 = s.nextInt();
+        int m3 = s.nextInt();
+        int m4 = s.nextInt();
+        int m5 = s.nextInt();
+        
+        double avg = (m1 + m2 + m3 + m4 + m5) / 5.0;
+        
+        if(avg == (int)avg)
+            System.out.println((int)avg);
+        else
+            System.out.printf("%.2f", avg);
+    }
+}
