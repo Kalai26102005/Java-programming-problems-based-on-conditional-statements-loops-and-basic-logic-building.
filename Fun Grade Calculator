@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int m1 = s.nextInt();
+        int m2 = s.nextInt();
+        int m3 = s.nextInt();
+        int m4 = s.nextInt();
+        int m5 = s.nextInt();
+        double avg = (m1 + m2 + m3 + m4 + m5) / 5.0;
+        if(avg >= 90)
+            System.out.println("Excellent!");
+        else if(avg >= 80)
+            System.out.println("Great Job!");
+        else if(avg >= 70)
+            System.out.println("Good Effort!");
+        else if(avg >= 50)
+            System.out.println("Keep Trying!");
+        else
+            System.out.println("Better Luck Next Time!");
+    }
+}
